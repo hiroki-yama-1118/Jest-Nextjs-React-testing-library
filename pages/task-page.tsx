@@ -20,7 +20,7 @@ const TaskPage: React.FC<STATICPROPS> = ({ staticTasks }) => {
     fallbackData: staticTasks, //初期値
     revalidateOnMount: true, //初期値を設定した時はtureにする必要がある
   })
-  if (error) return <span>Error!</span>
+  if (error) return <span>Eror!</span>
   return (
     <Layout title="Todos">
       <p className="text-4xl mb-10">todos page</p>
@@ -38,7 +38,6 @@ const TaskPage: React.FC<STATICPROPS> = ({ staticTasks }) => {
   )
 }
 export default TaskPage
-
 
 //useSWRとgetStaticPropsを併用した際の挙動はビルド時にgetStaticPropsが実行されてAPIからデータを取得（サーバー側で行われる）
 //取得したデータがpropsの形でtaskpageにわたりuseSWRの初期値になる
