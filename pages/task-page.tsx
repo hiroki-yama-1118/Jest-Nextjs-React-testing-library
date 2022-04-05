@@ -20,7 +20,7 @@ const TaskPage: React.FC<STATICPROPS> = ({ staticTasks }) => {
     fallbackData: staticTasks, //初期値
     revalidateOnMount: true, //初期値を設定した時はtureにする必要がある
   })
-  if (error) return <span>Eror!</span>
+  if (error) return <span>Error!</span>
   return (
     <Layout title="Todos">
       <p className="text-4xl mb-10">todos page</p>
